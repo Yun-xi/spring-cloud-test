@@ -10,9 +10,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xxxx</groupId>
-    <artifactId>config-servcer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>config-servcer</name>
+    <artifactId>service-ribbon</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>service-ribbon</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -21,14 +21,18 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
