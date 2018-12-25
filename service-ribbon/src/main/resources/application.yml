@@ -7,3 +7,7 @@ server:
 spring:
   application:
     name: service-ribbon
+hystrix:
+  config:
+    stream:
+      maxConcurrentConnections: 50
